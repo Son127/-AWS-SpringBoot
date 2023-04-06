@@ -37,6 +37,7 @@ public class BasicRestController {
 		return ResponseEntity.ok().body(DataResponseDto.of(userInfo));		
 	}
 	
+	
 	@GetMapping("/read2/{id}")						// @PathVariable(key)은 생략 불가, key값은 생략 가능 
 	public ResponseEntity<? extends ResponseDto> read2(@PathVariable int id){
 		Map<Integer, String> userMap = new HashMap<>();

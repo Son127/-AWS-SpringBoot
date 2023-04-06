@@ -36,10 +36,10 @@ public class BasicRestController2 {
 		return ResponseEntity.ok().body(DataResponseDto.of(map.get(id)));
 	}
 	
-	@PostMapping("/test3")
+	@PostMapping("/test3") //post
 	public ResponseEntity<? extends ResponseDto> test3(UserDto user){
 		
 		return ResponseEntity.created(null).body(DataResponseDto.of(user));
 	}
 	
-}
+}  
