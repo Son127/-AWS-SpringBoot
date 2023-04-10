@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.web.study.domain.entity.Lecture;
 import com.web.study.dto.request.lecture.LectureReqDto;
-import com.web.study.repository.LectureRepository;
+import com.web.study.repository.LectureRespository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -12,7 +12,8 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class LectureServiceImpl implements LectureService{
 	
-	private final LectureRepository lectureRepository;
+	// final -> 상수 : 초기화가 무조건 일어나야한다(초기화가 안일어나면 사용 못함)
+	private final LectureRespository lectureRepository;
 	
 	@Override
 	public void registeLecture(LectureReqDto lectureReqDto) {
