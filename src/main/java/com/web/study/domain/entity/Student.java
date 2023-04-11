@@ -6,22 +6,25 @@ import org.apache.ibatis.type.Alias;
 
 import com.web.study.dto.response.StudentRespDto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Builder
 @Getter
-@Alias("S1")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Student {
-	private int id;
-	private String name;
-	private LocalDate birth_date;
+	private int sdm_id;
+	private String sdm_name;
+	private LocalDate sdm_birth;
 	
 	public StudentRespDto toDto() {
 		return StudentRespDto.builder()
-				.id(id)
-				.name(name)
-				.birthDate(birth_date)
+				.id(sdm_id)
+				.name(sdm_name)
+				.birthDate(sdm_birth)
 				.build();
 	}
 }

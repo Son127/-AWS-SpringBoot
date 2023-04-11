@@ -2,8 +2,6 @@ package com.web.study.dto.request.course;
 
 import java.time.LocalDate;
 
-import org.apache.ibatis.annotations.Mapper;
-
 import com.web.study.domain.entity.Course;
 
 import lombok.Setter;
@@ -17,8 +15,8 @@ public class CourseReqDto {
 	
 	public Course toEntity() {
 		return Course.builder()
-				.lecture_id(lectureId)
-				.student_id(studentId)
+				.ltm_id(lectureId)
+				.sdm_id(studentId)
 				.registe_date(registeDate)
 				.build();
 	}
