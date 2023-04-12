@@ -30,7 +30,6 @@ public class CourseServiceImpl implements CourseService{
 		courseRespository.getCourseAll().forEach(entity ->{
 			dtos.add(entity.toDto());
 		});
-		
 		return dtos;
 	}
 	
