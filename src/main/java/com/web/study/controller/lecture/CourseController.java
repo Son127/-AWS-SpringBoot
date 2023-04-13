@@ -28,7 +28,7 @@ import lombok.RequiredArgsConstructor;
 public class CourseController {
 
 	private final CourseService courseService;
-	
+	//ResponseEntity 상태코드와 예외를 담을수있다
 	@PostMapping("/course")
 	public ResponseEntity<? extends ResponseDto> register(@RequestBody CourseReqDto  courseReqDto){
 			
