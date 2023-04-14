@@ -37,7 +37,6 @@ public class CourseController {
 		return ResponseEntity.ok().body(ResponseDto.ofDefault());
 	}
 	
-	@CheckNameAspect
 	@GetMapping("/course/all")
 	public ResponseEntity<? extends ResponseDto> getCourseAll() {
 		
